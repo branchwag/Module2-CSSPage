@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
     background-color: #333940;
     color:#fff;
     font-family: sans-serif;
@@ -28,40 +28,46 @@ p {
 }
 
 .container {
-    border: 1px solid #fff;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-h2 {
+
+.card {
+    display: block;
+    border: 1px dashed #fff;
+    min-width: 200px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.cardheader {
+    position: relative;
+    margin-top: -20px;
+}
+
+.cardheader h2 {
     color: #e867ed;
     font-size: 2em;
     font-weight: bold;
-    margin: 15px;
     border: 1px solid #fff;
-    border-radius: 50px;
+    border-radius: 10px;
     padding: 10px;     
 }
 
-.card {
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px dashed #fff;
-    justify-content: center;
-    min-width: 200px;
-}
 
 .card p {
     color: #e867ed;
+    padding: 10px;
+
 }
 
 .codebox {
-    background-image: linear-gradient (
-	rgba(232, 102, 236, 0.3) 0%
-	rgba(232, 102, 236, 0.6) 100%);
+    background-image: linear-gradient(rgba(232, 102, 236, 0.3) 0%, rgba(232, 102, 236, 0.6) 100%);
     min-width: 200px;
-    
+    min-height: 200px;
+    border-radius: 5px;
 }
 
 footer {
