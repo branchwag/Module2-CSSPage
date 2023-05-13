@@ -23,8 +23,9 @@ h1 {
     margin: 15px;     
 }
 
-p {
+main p {
     padding: 20px;
+    font-size: 1em;
 }
 
 .container {
@@ -37,7 +38,7 @@ p {
 .card {
     display: block;
     border: 1px dashed #fff;
-    min-width: 200px;
+    flex: 0 0 25%;
     padding: 10px;
     margin: 10px;
 }
@@ -45,11 +46,12 @@ p {
 .cardheader {
     position: relative;
     margin-top: -20px;
+    text-align: start;
 }
 
 .cardheader h2 {
     color: #e867ed;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     border: 1px solid #fff;
     border-radius: 10px;
@@ -60,6 +62,7 @@ p {
 .card p {
     color: #e867ed;
     padding: 10px;
+    margin: 5px;
 
 }
 
@@ -68,6 +71,10 @@ p {
     min-width: 200px;
     min-height: 200px;
     border-radius: 5px;
+    color: #fff;
+    font-family: monospace;
+    font-size: 1em;
+    padding: 10px; 
 }
 
 footer {
@@ -81,3 +88,19 @@ footer h3 {
     font-family: sans-serif;
     margin-top: 10px;
 }
+
+/* media query to change the width of the cards so they split into two columns at 992px or smaller*/
+
+@media screen and (max-width: 992px) {
+    .card {
+      width: 50%;
+    }
+  }
+  
+  /* media query to change the width of the cards so they are stacked on top of each other at 768px or smaller */
+  
+  @media screen and (max-width: 768px) {
+    .card {
+      width: 100%;
+    }
+  }
