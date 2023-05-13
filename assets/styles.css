@@ -1,3 +1,115 @@
 * {
+    box-sizing: border-box;
+    /* border: 1px solid #fff; */
+    background-color: #333940;
+    color:#fff;
+    font-family: sans-serif;
+    font-size: 16px; 
     
 }
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #e867ed;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 15px;     
+}
+
+main p {
+    padding: 20px;
+    font-size: 1em;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.card {
+    display: block;
+    border: 1px dashed #fff;
+    flex: 0 0 25%;
+    padding: 10px;
+    margin: 10px;
+}
+
+.cardheader {
+    position: relative;
+    margin-top: -20px;
+    text-align: start;
+}
+
+.cardheader h2 {
+    color: #e867ed;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px;     
+}
+
+
+.card p {
+    color: #e867ed;
+    padding: 10px;
+    margin: 5px;
+
+}
+
+.codebox pre {
+    background-image: linear-gradient(rgba(232, 102, 236, 0.3) 0%, rgba(232, 102, 236, 0.6) 100%);
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 5px;
+    color: #fff;
+    font-family: monospace;
+    font-size: 1em;
+    padding: 10px;
+}
+
+pre {
+    font-size: 1em;
+    margin: 0;
+    text-align: left; 
+}
+
+footer {
+    text-align: center;
+}
+
+footer h3 {
+    color: #e867ed;
+    font-weight: bold;
+    font-size: 1em;
+    font-family: sans-serif;
+    margin-top: 10px;
+}
+
+/* media query to change the width of the cards so they split into two columns at 992px or smaller*/
+
+@media screen and (max-width: 992px) {
+    .card {
+      width: 50%;
+    }
+  }
+  
+  /* media query to change the width of the cards so they are stacked on top of each other at 768px or smaller */
+  
+  @media screen and (max-width: 768px) {
+    .card {
+      width: 100%;
+    }
+  }
+
+
+
