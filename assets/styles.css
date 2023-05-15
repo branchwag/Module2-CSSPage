@@ -1,3 +1,7 @@
+:root {
+    --lightcolor: #e867ed;
+}
+
 * {
     box-sizing: border-box;
     /* border: 1px solid #fff; */
@@ -118,6 +122,14 @@ footer h3 {
     /* overflow-x: auto;
     white-space: pre-wrap;
     word-wrap: break-word; */
+}
+
+code {
+    background: none;
+}
+
+code::selection {
+    background-color: #008B8B;
 }
 
 .codebox:hover pre {
