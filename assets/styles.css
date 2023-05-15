@@ -1,11 +1,13 @@
 :root {
     --lightcolor: #e867ed;
+    --darkcolor: #333940;
+    --highlightcolor: #008B8B;
 }
 
 * {
     box-sizing: border-box;
     /* border: 1px solid #fff; */
-    background-color: #333940;
+    background-color: var(--darkcolor);
     color:#fff;
     font-family: sans-serif;
     font-size: 16px;
@@ -14,7 +16,7 @@
 }
 
 main {
-    display: flex;
+    /* display: flex; */
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
@@ -37,11 +39,11 @@ main p {
 }
 
 .container {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    /* display: grid;
-    grid-template-columns: repeat(3,1fr); */
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
 }
 
 
@@ -79,7 +81,7 @@ main p {
 
 
 .card p {
-    color: #e867ed;
+    color: var(--lightcolor);
     padding: 10px;
     margin: 5px;
     text-align: left;
@@ -108,7 +110,7 @@ footer {
 }
 
 footer h3 {
-    color: #e867ed;
+    color: var(--lightcolor);
     font-weight: bold;
     font-size: 1.25em;
     font-family: sans-serif;
@@ -124,24 +126,24 @@ code {
 }
 
 code::selection {
-    background-color: #008B8B;
+    background-color: var(--highlightcolor);
 }
 
 .codebox:hover pre {
-    background-color: #008B8B;
+    background-color: var(--highlightcolor);
 }
 
 /* media query to change the width of the cards so they split into two columns at 992px or smaller*/
 
 @media screen and (max-width: 992px) {
     .container {
-        display: flex;
+        /* display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        width: 50%;
-        /* display: grid;
-        grid-template-columns: repeat(2,1fr); */
-        /* width: 100%; */
+        width: 50%; */
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
     }
   }
   
@@ -149,12 +151,12 @@ code::selection {
   
   @media screen and (max-width: 768px) {
     .container {
-        display: flex;
+        /* display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        width: 100%;
-        /* display: flex;
-        flex-direction: column; */
+        width: 100%; */
+        display: flex;
+        flex-direction: column;
 
     }
   }
