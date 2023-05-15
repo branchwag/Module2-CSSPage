@@ -1,3 +1,7 @@
+:root {
+    --lightcolor: #e867ed;
+}
+
 * {
     box-sizing: border-box;
     /* border: 1px solid #fff; */
@@ -18,7 +22,7 @@ main {
 }
 
 h1 {
-    color: #e867ed;
+    color: var(--lightcolor);
     font-size: 2.5em;
     margin: 5px;
     font-weight: bold;     
@@ -33,14 +37,16 @@ main p {
 }
 
 .container {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
 }
 
 
 .card {
-    /* display: block; */
+    display: block;
     border: 2px dashed #fff;
     flex: 0 0 25%;
     padding: 10px;
@@ -53,7 +59,7 @@ main p {
     text-align: start;
 }
 
-.card .cardheader {
+.card, .cardheader {
 	border-radius: 8px;
 	transition: all 0.5s ease-in-out;
 }
@@ -63,7 +69,7 @@ main p {
 }
 
 .cardheader h2 {
-    color: #e867ed;
+    color: var(--lightcolor);
     font-size: 1.75em;
     font-weight: bolder;
     border: 1px solid #fff;
@@ -81,14 +87,6 @@ main p {
     font-size: 1em;
 }
 
-.codebox pre {
-    background: none;
-}
-
-/* .codebox:hover, pre {
-    background-color: #00FEFC;
-} */
-
 .codebox {
     background-image: linear-gradient(rgba(232, 102, 236, 0.3) 0%, rgba(232, 102, 236, 0.6) 100%);
     min-width: 200px;
@@ -101,11 +99,13 @@ main p {
     padding: 10px;
     margin: 0;
     text-align: left;
-    user-select: text;
+    user-select: all;
+    display: flex;
 }
 
 footer {
     text-align: center;
+    /* display: flex; */
 }
 
 footer h3 {
@@ -116,19 +116,54 @@ footer h3 {
     margin: 20px;
 }
 
+.codebox pre {
+    /* display: inline-block; */
+    /* display: inline; */
+    /* width: min-content; */
+    /* white-space: pre-wrap; */
+    background: none;
+    /* overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word; */
+}
+
+code {
+    background: none;
+}
+
+code::selection {
+    background-color: #008B8B;
+}
+
+.codebox:hover pre {
+    background-color: #008B8B;
+}
+
 /* media query to change the width of the cards so they split into two columns at 992px or smaller*/
 
 @media screen and (max-width: 992px) {
-    .card {
-      width: 50%;
+    .container {
+        /* display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 50%; */
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        /* width: 100%; */
     }
   }
   
   /* media query to change the width of the cards so they are stacked on top of each other at 768px or smaller */
   
   @media screen and (max-width: 768px) {
-    .card {
-      width: 100%;
+    .container {
+        /* display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%; */
+        display: flex;
+        flex-direction: column;
+
     }
   }
 
