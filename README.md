@@ -10,8 +10,7 @@ No installation needed! This is just a website.
 
 ## Usage
 
-Visit the page here: 
-
+Visit the page here: https://branchwag.github.io/Module2-CSSPage/
 
 ## Credits
 
