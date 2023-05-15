@@ -22,7 +22,7 @@ main {
 }
 
 h1 {
-    color: #e867ed;
+    color: var(--lightcolor);
     font-size: 2.5em;
     margin: 5px;
     font-weight: bold;     
@@ -37,9 +37,11 @@ main p {
 }
 
 .container {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
 }
 
 
@@ -67,7 +69,7 @@ main p {
 }
 
 .cardheader h2 {
-    color: #e867ed;
+    color: var(--lightcolor);
     font-size: 1.75em;
     font-weight: bolder;
     border: 1px solid #fff;
@@ -103,6 +105,7 @@ main p {
 
 footer {
     text-align: center;
+    /* display: flex; */
 }
 
 footer h3 {
@@ -139,16 +142,28 @@ code::selection {
 /* media query to change the width of the cards so they split into two columns at 992px or smaller*/
 
 @media screen and (max-width: 992px) {
-    .card {
-      width: 50%;
+    .container {
+        /* display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 50%; */
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        /* width: 100%; */
     }
   }
   
   /* media query to change the width of the cards so they are stacked on top of each other at 768px or smaller */
   
   @media screen and (max-width: 768px) {
-    .card {
-      width: 100%;
+    .container {
+        /* display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%; */
+        display: flex;
+        flex-direction: column;
+
     }
   }
 
